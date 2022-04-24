@@ -1,0 +1,285 @@
+/*===== GOOGLE FONTS =====*/
+
+
+/*===== VARIABLES =====*/
+:root {
+    --header-size: 3rem;
+    
+    /*===== Colors =====*/
+    --black-color: #000000;
+    --black-color-alt: #202020;
+    --white-color-alt: #ececec;
+    --white-color: #FFFFFF;
+
+    /*===== Font and tipography =====*/
+    --body-font: Arial, Helvetica, sans-serif;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-fontt-size: 0.75rem;
+    --text-line-height: 2rem;
+    
+    /*===== Font weight =====*/
+    --normal-font-weight: 500;
+    --semibold-font-weight: 600;
+    --bold-font-weight: 700;
+
+    /*===== Margenes =====*/
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*===== Z index =====*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --biggest-font-size: 4rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-fontt-size: 0.813rem;
+    }
+}
+
+/*===== Z index =====*/
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    margin: var(--header-size) 0 0 0;
+    background-color: var(--white-color-alt);
+    color: var(--black-color-alt);
+    line-height: var(--text-line-height);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/*===== CLASS CSS =====*/
+
+.section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: calc(100vh - var(--header-size));
+}
+
+.section-title, .section-subtitle {
+    text-align: center;
+}
+
+.section-title {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: var(--mb-1);
+    font-size: var(--h1-font-size);
+}
+
+.section-subtitle {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: var(--mb-2);
+    font-size: var(--h2-font-size);
+}
+
+.dark {
+    color: var(--white-color-alt);
+}
+
+.white {
+    color: var(--black-color-alt);
+}
+
+/*===== LAYOUTS =====*/
+.bd-container {
+    max-width: 960px;
+    width: calc(100% - 2rem);
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+}
+
+.l-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--white-color-alt);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.247);
+}
+
+/*===== NAV =====*/
+.nav {
+    max-width: 1024px;
+    height: var(--header-size);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    font-weight: var(--semibold-font-weight);
+    color: var(--black-color-alt);
+}
+
+.nav__logo:hover {
+    color: var(--black-color);
+}
+
+.nav__menu {
+    display: none;
+}
+
+/*===== HOME =====*/
+.home {
+    background: linear-gradient(135deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4b0082, #8F00FF);
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+}
+
+.home__title {
+    font-size: var(--biggest-font-size);
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.home__subtitle {
+    text-transform: uppercase;
+    font-size: var(--h1-font-size);
+}
+
+.home__subtitle span {
+    color: rgba(0, 0, 0, 0.719);
+    line-height: 3rem;
+    font-weight: var(--bold-font-weight);
+}
+
+/*===== DRAGON BALL =====*/
+.dragon-ball {
+    /* background: linear-gradient(var(--white-color-alt), #F28100); */
+    background-color: #F28100;
+}
+
+.dragon-ball__title, .dragon-ball__subtitle {
+    color: var(--white-color);
+}
+
+.dragon-ball__data {
+    display: grid;
+    align-items: center;
+    gap: var(--mb-1);
+}
+
+.dragon-ball__card {
+    background-color: var(--white-color-alt);
+    text-align: center;
+    border-radius: var(--mb-1);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.479);
+    padding: var(--mb-2);
+}
+
+.dragon-ball__title-card {
+    color: var(--black-color-alt);
+    margin-bottom: var(--mb-1);
+}
+
+.dragon-ball__desc-card {
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+.dragon-ball__desc-card a {
+    text-decoration: underline;
+}
+
+.dragon-ball__desc-card a:hover {
+    color: blue;
+}
+
+.dragon-ball__desc-card a:active {
+    color: red;
+}
+
+.dragon-ball__desc-card a::after {
+    content: '\1F517';
+    font-size: 0.82rem;
+}
+
+.dragon-ball__image {
+}
+
+.dragon-ball__img {
+    height: 100px;
+    width: auto;
+}
+
+/*===== Dragon Ball media querries =====*/
+@media screen and (min-width: 568px) {
+    .dragon-ball__data {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/*===== FOOTER =====*/
+.footer {
+    height: var(--header-size);
+    text-align: center;
+    background-color: var(--black-color-alt);
+    color: var(--white-color-alt);
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.377);
+}
+
+/*===== MEDIA QUERRIES =====*/
+@media screen and (min-width: 576px) {
+    .section-title {
+        margin-bottom: var(--mb-2);
+    }
+    
+    .section-subtitle {
+        margin-bottom: var(--mb-3);
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .bd-container {
+        margin-left: auto;
+        margin-right: auto;   
+    }
+
+    .section {
+        padding-top: 4rem;
+    }
+}
